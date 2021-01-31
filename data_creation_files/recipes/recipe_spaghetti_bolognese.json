@@ -1,0 +1,54 @@
+{
+  "name": "spaghetti bolognese",
+  "ingredients": [
+    {
+      "name": "onion",
+      "amount": 1
+    },
+    {
+      "name": "carrots",
+      "amount": 2
+    },
+    {
+      "name": "garlic",
+      "amount": 2,
+      "units": "cloves"
+    },
+    {
+      "name": "rosemary",
+      "amount": 2,
+      "units": "leaves"
+    },
+    {
+      "name": "beef mince",
+      "amount": 500,
+      "units": "grams"
+    },
+    {
+      "name": "chopped tomatoes",
+      "amount": 800,
+      "units": "grams"
+    },
+    {
+      "name": "spaghetti",
+      "amount": 400,
+      "units": "grams"
+    },
+    {
+      "name": "tomato puree",
+      "amount": 2,
+      "units": "tbsp"
+    },
+    {
+      "name": "beef stock",
+      "amount": 1,
+      "units": "cube"
+    },
+    {
+      "name": "parmesan",
+      "amount": 75,
+      "units": "grams"
+    }
+    ],
+  "meal_prep_rating": "microwavable"
+}

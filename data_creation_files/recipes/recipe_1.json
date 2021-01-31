@@ -1,0 +1,29 @@
+{
+	"name": "barbeque chicken",
+	"ingredients": [
+		{
+			"name": "barbeque sauce",
+			"amount": "3",
+			"units": "tbsp"
+		},
+		{
+			"name": "chicken breasts",
+			"amount": "350",
+			"units": "grams"
+
+		},
+		{
+			"name": "extra virgin olive oil",
+			"amount": "1",
+			"units": "tbsp"
+		},
+		{
+			"name": "salt",
+			"amount": "1",
+			"units": "sprinkle"
+		},
+		{
+			"name": "ground black pepper"
+		}
+	]
+}
