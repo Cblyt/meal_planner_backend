@@ -1,0 +1,29 @@
+{
+    "name": "Pesto Pasta",
+    "description": "This two ingredient recipe will really knock your socks off",
+    "serves": 2,
+    "cooking_duration": 1,
+    "difficulty": "Extremely difficult",
+    "ingredients": [
+        {
+            "id": 1,
+            "name": "pesto",
+            "amount": 2,
+            "units": "tbsp"
+        },
+        {
+            "id": 2,
+            "name": "penne pasta",
+            "amount": 300,
+            "units": "grams"
+        }
+    ],
+    "method": [
+        {
+            "content": "Cook pasta"
+        },
+        {
+            "content": "Add pesto to cooked pasta"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "name": "spaghetti bolognese",
+    "description": "This ultimate pasta recipe is a total classic, delicious, and super-easy to knock together.",
+    "serves": 6,
+    "cooking_duration": 75,
+    "difficulty": "Easy",
+    "ingredients": [
+        {
+            "name": "onion",
+            "amount": 1
+        },
+        {
+            "name": "carrots",
+            "amount": 2
+        },
+        {
+            "name": "garlic",
+            "amount": 2,
+            "units": "cloves"
+        },
+        {
+            "name": "rosemary",
+            "amount": 2,
+            "units": "leaves"
+        },
+        {
+            "name": "beef mince",
+            "amount": 500,
+            "units": "grams"
+        },
+        {
+            "name": "chopped tomatoes",
+            "amount": 800,
+            "units": "grams"
+        },
+        {
+            "name": "spaghetti",
+            "amount": 400,
+            "units": "grams"
+        },
+        {
+            "name": "red wine",
+            "amount": 200,
+            "units": "ml"
+        },
+        {
+            "name": "streaky bacon",
+            "amount": 6,
+            "units": "rashors"
+        },
+        {
+            "name": "tomato puree",
+            "amount": 2,
+            "units": "tbsp"
+        },
+        {
+            "name": "beef stock",
+            "amount": 1,
+            "units": "cube"
+        },
+        {
+            "name": "parmesan",
+            "amount": 75,
+            "units": "grams"
+        }
+    ],
+    "method": [
+        "Preheat the oven to 180ºC/350ºF/gas 4.",
+        "Peel and finely chop the garlic and onions, pick and finely chop the rosemary, then finely slice the bacon.",
+        "Heat a splash of oil in a casserole pan on a medium heat, add the bacon, rosemary, garlic and onion and cook for 5 minutes, or until softened, stirring occasionally.",
+        "Add the minced beef, breaking it apart with the back of a spoon, then cook for 2 to 3 minutes, or until starting to brown, then pour in the wine. Leave to bubble and cook away.",
+        "Meanwhile, drain and tip the sun-dried tomatoes into a food processor, blitz to a paste, then add to the pan with the tomatoes. Stir well, break the plum tomatoes apart a little.",
+        "Cover with a lid then place in the oven for 1 hour, removing the lid and giving it a stir after 30 minutes – if it looks a little dry at this stage, add a splash of water to help it along.",
+        "About 10 minutes before the time is up, cook the spaghetti in boiling salted water according to the packet instructions.",
+        "Once the spaghetti is cooked, drain, reserving a mugful of cooking water, then return to the pan with a few spoons of Bolognese, a good grating of Parmesan and a drizzle of extra virgin olive oil.",
+        "Toss to coat the spaghetti, loosening with a splash of cooking water, if needed.",
+        "Divide the spaghetti between plates or bowls, add a good spoonful of Bolognese to each, then serve with a fine grating of Parmesan."
+    ]
+}

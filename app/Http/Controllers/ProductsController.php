@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use \App\Models\Product;
-use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
@@ -14,14 +12,14 @@ class ProductsController extends Controller
         return Product::all();
     }
 
-    public function store(Request $request)
-    {
-        return Product::create($request->all());
-    }
-
     public function show($id)
     {
         return Product::find($id);
+    }
+
+    public function getProductByName($name)
+    {
+        return Product::where('name', 'like', $name . '%')->orderBy('price', 'asc')->get();
     }
 
     public function update(Request $request, $id)
@@ -32,42 +30,25 @@ class ProductsController extends Controller
         return $product;
     }
 
-    public function destroy($id)
+    public function generateProductDataByName(Request $request)
     {
-        return Product::destroy($id); 
-    }
+        $stores = ['Aldi', 'Kroger', 'Walmart', 'Trader Joe', 'Publix'];
+        $unit_types = ['grams', 'mililitres', 'kilograms'];
 
-    public function getProductByName($name)
-    {
-        return Product::where('name', 'like',$name.'%')->orderBy('price', 'asc')->get();
-    }
-    
-    // public function generateRandPricesForProducts()
-    // {
-    //     $products = Product::all();
-    //     foreach($products as &$product)
-    //     {
-    //         if($product->price < 0.01) {
-    //             $price = mt_rand(1, 10000)/100;
-    //             $product->price = $price;
-    //             $product->save();
-    //             print($product->id);
-    //         }
-    //     }
-    // }
+        foreach ($stores as &$store) {
+            $product = Product::create($request->all());
 
-    public function generateRandSupermarketsForProducts()
-    {
-        $supermarkets[] = ['aldi', 'tesco', 'asda', 'waitrose'];
-        $products = Product::all();
-        foreach($products as &$product)
-        {
-            if($product->supermarket == null) {
-                $rnd = mt_rand(0, 3);
-                $product->supermarket = $supermarkets[$rnd];
-                $product->save();
-                print($product->id);
-            }
+            $price = mt_rand(1, 1000) / 100;
+            $amount = mt_rand(1, 100);
+            $units = $unit_types[mt_rand(0, 2)];
+
+            $product->price = $price;
+            $product->amount = $amount;
+            $product->units = $units;
+            $product->store = $store;
+            $product->save();
+            $products[] = $product;
         }
+        return $products;
     }
 }

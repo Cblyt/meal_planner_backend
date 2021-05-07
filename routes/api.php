@@ -22,11 +22,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/getMatchingProducts', [RecipeIngredientFinder::class, 'getMatchingProductsByIngredientIds']);
 Route::apiResource('recipes', RecipeController::class);
+Route::get('/products/{name}', [ProductsController::class, 'getProductByName']);
 Route::apiResource('products', ProductsController::class);
-Route::get('/productname/{name}', [ProductsController::class, 'getProductByName']);
+Route::post('/generateProductDataByName', [ProductsController::class, 'generateProductDataByName']);
 
-Route::get('/recipes/{id}/getMatchingProducts', [RecipeIngredientFinder::class, 'getMatchingProducts']);
+Route::get('/getMatchingProducts/{id}', [RecipeIngredientFinder::class, 'getMatchingProductsByRecipeId']);
+Route::get('/getCheapestMatchingProducts/{id}', [RecipeIngredientFinder::class, 'getCheapestMatchingProductsByRecipeId']);
 
 
 Route::post('/ingredient', [IngredientsController::class, 'create']);

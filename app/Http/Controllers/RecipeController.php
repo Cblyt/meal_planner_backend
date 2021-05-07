@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Recipe;
 use App\Models\Ingredient;
+use App\Models\Instruction;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
@@ -15,40 +16,31 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::paginate(10);
-
-        return view('recipe.index', compact('recipes'));
+        return Recipe::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    protected function create()
-    {
-        return view('recipe.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->validate([
             'name' => ['required'],
+            'description' => ['required'],
+            'serves' => ['required'],
+            'cooking_duration' => ['required'],
+            'difficulty' => ['required'],
             'ingredients' => ['required'],
+            'method' => ['required']
         ]);
 
         $recipe = Recipe::create([
-            'name' => $data['name']
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'serves' => $data['serves'],
+            'cooking_duration' => $data['cooking_duration'],
+            'difficulty' => $data['difficulty'],
         ]);
 
         $ingredients = $data['ingredients'];
-        foreach($ingredients as &$ingredient) {
+        foreach ($ingredients as &$ingredient) {
             Ingredient::create([
                 'name' => $ingredient['name'],
                 'amount' => $ingredient['amount'] ?? null,
@@ -56,6 +48,15 @@ class RecipeController extends Controller
                 'recipe_id' => $recipe->id,
             ]);
         }
+
+        $instructions = $data['method'];
+        foreach ($instructions as &$instruction) {
+            Instruction::create([
+                'instruction' => $instruction['content'],
+                'recipe_id' => $recipe->id
+            ]);
+        }
+
         return $recipe;
     }
 
@@ -65,9 +66,20 @@ class RecipeController extends Controller
      * @param  \App\Models\recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recipe)
+    public function show($id)
     {
-        return view('recipe.show', ['recipe' => $recipe]);
+        $recipe = Recipe::select('id', 'name', 'description', 'difficulty', 'serves', 'cooking_duration')->find($id);
+        $data = $recipe;
+
+        $ingredients = Ingredient::where('recipe_id', $id)->select('id', 'name', 'amount', 'units')->get();
+        $data['ingredients'] = $ingredients;
+
+        $method = Instruction::where('recipe_id', $id)->select('instruction')->get();
+        foreach ($method as &$instruction) {
+            $instructions[] = $instruction->instruction;
+        }
+        $data['instructions'] = $instructions;
+        return $data;
     }
 
     /**
@@ -93,14 +105,10 @@ class RecipeController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\recipe  $recipe
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(recipe $recipe)
+    public function destroy($id)
     {
-        //
+        Ingredient::where('recipe_id', $id)->delete();
+        Instruction::where('recipe_id', $id)->delete();
+        return Recipe::destroy($id);
     }
 }

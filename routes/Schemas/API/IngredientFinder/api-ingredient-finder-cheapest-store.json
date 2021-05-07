@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "store": {
+            "type": "string"
+        },
+        "data": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ingredient_name": {
+                            "type": "string"
+                        },
+                        "product_id": {
+                            "type": "string"
+                        },
+                        "product_name": {
+                            "type": "string"
+                        },
+                        "price": {
+                            "type": "string"
+                        },
+                        "amount": {
+                            "type": "string"
+                        },
+                        "units": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "ingredient_name",
+                        "product_id",
+                        "product_name",
+                        "price",
+                        "amount",
+                        "units"
+                    ]
+                }
+            ]
+        },
+        "total_cost": {
+            "type": "number"
+        },
+        "missing_products": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "store",
+        "data",
+        "total_cost",
+        "missing_products"
+    ]
+}

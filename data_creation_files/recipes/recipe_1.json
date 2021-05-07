@@ -1,29 +1,52 @@
 {
-	"name": "barbeque chicken",
-	"ingredients": [
-		{
-			"name": "barbeque sauce",
-			"amount": "3",
-			"units": "tbsp"
-		},
-		{
-			"name": "chicken breasts",
-			"amount": "350",
-			"units": "grams"
-
-		},
-		{
-			"name": "extra virgin olive oil",
-			"amount": "1",
-			"units": "tbsp"
-		},
-		{
-			"name": "salt",
-			"amount": "1",
-			"units": "sprinkle"
-		},
-		{
-			"name": "ground black pepper"
-		}
-	]
+    "name": "barbeque chicken",
+    "description": "Here's how to get your barbecue chicken brilliantly chargrilled, juicy and perfectly cooked",
+    "serves": 4,
+    "cooking_duration": 60,
+    "difficulty": "Easy",
+    "ingredients": [
+        {
+            "name": "ketchup",
+            "amount": "3",
+            "units": "tbsp"
+        },
+        {
+            "name": "chicken breasts",
+            "amount": "480",
+            "units": "grams"
+        },
+        {
+            "name": "extra virgin olive oil",
+            "amount": "1",
+            "units": "tsp"
+        },
+        {
+            "name": "runny honey",
+            "amount": "3",
+            "units": "tbsp"
+        },
+        {
+            "name": "Dijon or English mustard",
+            "amount": "1",
+            "units": "tsp"
+        },
+        {
+            "name": "dried chilli",
+            "amount": "1"
+        },
+        {
+            "name": "smoked paprika",
+            "amount": "1.5",
+            "units": "tsp"
+        }
+    ],
+    "method": [
+        "Place a large non-stick frying pan on a high heat with 1 tablespoon of oil, then add the popping corn and cover with a lid. Once popped, add a few generous shakes of Tabasco, toss together and tip into a large salad bowl.",
+        "In the same pan, grill the corn until lightly charred all over, turning regularly, then remove.",
+        "Season with a small pinch of salt and pepper and mix well. Spoon out a few tablespoons of the marinade and set it aside.",
+        "Add the chicken breasts to the bowl with the remaining marinade. Turn them over in the marinade so they’re well coated, cover with clingfilm and leave to sit for 5 to 10 minutes or until the grill is ready.",
+        "If using a griddle pan, put it over high heat now to get it screaming hot.",
+        "Use tongs to transfer your chicken breasts onto the grill or griddle pan. For chicken breasts approximately 2cm thick, cook for about 5 minutes on each side, turning every minute and basting as you go, or until golden and cooked through.",
+        "Spoon a little of the reserved sauce over each breast."
+    ]
 }

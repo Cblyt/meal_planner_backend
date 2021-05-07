@@ -1,0 +1,21 @@
+{
+    "name": "",
+    "description": "",
+    "serves": 0,
+    "cooking_duration": 0,
+    "difficulty": "",
+    "ingredients": [
+        {
+            "name": "",
+            "amount": 0
+        },
+        {
+            "name": "",
+            "amount": 0
+        }
+    ],
+    "method": [
+        "",
+        ""
+    ]
+}

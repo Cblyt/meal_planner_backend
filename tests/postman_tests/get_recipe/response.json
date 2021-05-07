@@ -1,0 +1,94 @@
+{
+    "id": 2,
+    "name": "spaghetti bolognese",
+    "description": "This ultimate pasta recipe is a total classic, delicious, and super-easy to knock together.",
+    "difficulty": "Easy",
+    "serves": 6,
+    "cooking_duration": 75,
+    "ingredients": [
+        {
+            "id": 6,
+            "name": "onion",
+            "amount": 1,
+            "units": null
+        },
+        {
+            "id": 7,
+            "name": "carrots",
+            "amount": 2,
+            "units": null
+        },
+        {
+            "id": 8,
+            "name": "garlic",
+            "amount": 2,
+            "units": "cloves"
+        },
+        {
+            "id": 9,
+            "name": "rosemary",
+            "amount": 2,
+            "units": "leaves"
+        },
+        {
+            "id": 10,
+            "name": "beef mince",
+            "amount": 500,
+            "units": "grams"
+        },
+        {
+            "id": 11,
+            "name": "chopped tomatoes",
+            "amount": 800,
+            "units": "grams"
+        },
+        {
+            "id": 12,
+            "name": "spaghetti",
+            "amount": 400,
+            "units": "grams"
+        },
+        {
+            "id": 13,
+            "name": "red wine",
+            "amount": 200,
+            "units": "ml"
+        },
+        {
+            "id": 14,
+            "name": "streaky bacon",
+            "amount": 6,
+            "units": "rashors"
+        },
+        {
+            "id": 15,
+            "name": "tomato puree",
+            "amount": 2,
+            "units": "tbsp"
+        },
+        {
+            "id": 16,
+            "name": "beef stock",
+            "amount": 1,
+            "units": "cube"
+        },
+        {
+            "id": 17,
+            "name": "parmesan",
+            "amount": 75,
+            "units": "grams"
+        }
+    ],
+    "instructions": [
+        "Preheat the oven to 180\u00baC\/350\u00baF\/gas 4.",
+        "Peel and finely chop the garlic and onions, pick and finely chop the rosemary, then finely slice the bacon.",
+        "Heat a splash of oil in a casserole pan on a medium heat, add the bacon, rosemary, garlic and onion and cook for 5 minutes, or until softened, stirring occasionally.",
+        "Add the minced beef, breaking it apart with the back of a spoon, then cook for 2 to 3 minutes, or until starting to brown, then pour in the wine. Leave to bubble and cook away.",
+        "Meanwhile, drain and tip the sun-dried tomatoes into a food processor, blitz to a paste, then add to the pan with the tomatoes. Stir well, break the plum tomatoes apart a little.",
+        "Cover with a lid then place in the oven for 1 hour, removing the lid and giving it a stir after 30 minutes \u2013 if it looks a little dry at this stage, add a splash of water to help it along.",
+        "About 10 minutes before the time is up, cook the spaghetti in boiling salted water according to the packet instructions.",
+        "Once the spaghetti is cooked, drain, reserving a mugful of cooking water, then return to the pan with a few spoons of Bolognese, a good grating of Parmesan and a drizzle of extra virgin olive oil.",
+        "Toss to coat the spaghetti, loosening with a splash of cooking water, if needed.",
+        "Divide the spaghetti between plates or bowls, add a good spoonful of Bolognese to each, then serve with a fine grating of Parmesan."
+    ]
+}

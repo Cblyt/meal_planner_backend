@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "items": [
+        {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "string"
+                },
+                "units": {
+                    "type": "string"
+                },
+                "store": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "name",
+                "price",
+                "amount",
+                "units",
+                "store"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "difficulty": {
+            "type": "string"
+        },
+        "serves": {
+            "type": "integer"
+        },
+        "cooking_duration": {
+            "type": "integer"
+        },
+        "ingredients": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "amount": {
+                            "type": "integer"
+                        },
+                        "units": {
+                            "type": "null"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "name",
+                        "amount",
+                        "units"
+                    ]
+                }
+            ]
+        },
+        "instructions": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "description",
+        "difficulty",
+        "serves",
+        "cooking_duration",
+        "ingredients",
+        "instructions"
+    ]
+}
